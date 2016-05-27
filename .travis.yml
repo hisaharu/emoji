@@ -1,7 +1,15 @@
 addons:
   apt:
     packages:
-      - imagemagick
-      - unzip
+    - imagemagick
+    - unzip
 script:
-  - ./build.sh
+- ./build.sh
+deploy:
+  provider: releases
+  file: "seyana.png"
+  on:
+    tags: true
+env:
+  global:
+    secure: IZrZpfhaj8O5TFgOQh6T0914AHM+Yl09zMd69STwkUjoPowrO19E64yik6tZxEvgeXrquSLqK5ILyorhNbvZPEBkpYYEZArT8r3K7WPlmFuPU2UBT83x2jQdnhz2+3Nn9Bvoc9AjQv0vlZvJKSK/6cS2/SNBfaoBvqCU9pOBxomhgH8yNn4ezPEZyFNnxi5R+phQB68/bhE8eEzmTF/ea5DC4nhS9wUbC7nDHY1X27zKyWBYcYDC0dIReVsIcuKj70GdffBbqKBolkA6cZaY/EjOEGuQd+ncoKP6o4jVoEOVatgWAphrhIcPh9RmV2VC1ftr1010gvCS3EJKwLGheyoImJp+b1w00tUYwNbhakcnCqo5Od1CLpthVrT+UPNRuS1NuFZ7eHfOBKpdM9r3gPDKt7izNW5soHYLJ8AtzQde2neWoCRa/QpFac2ATqhuNi4KZMMnhk3U2SxtU5ruwyvbadTaFSDa0iOc6T5uzXvrkik9T7iBpZnfwUoBR2KbhPdFo+o1h+yUFAFrexaDQBLyeu8n9yZSFI/Lz19VRSlvF4TGwYxcl+JZcil/qN9vhT9FFZGMFkqVcYKBCJU1aJndFZEne9AePniX1LDk91r9b8EVDb+MsiT2kX3l4VWRvi4b+WOFwoFnTSBMhCLQDhP2ipT1fdf1uDlTwd0FNYU=
