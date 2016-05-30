@@ -5,4 +5,4 @@ deployment:
   dev:
     branch: dev
     commands:
-      - ./release.sh seyana.pn seyana.png
+      - ./release.sh seyana.png seyana.png
