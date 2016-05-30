@@ -11,13 +11,15 @@ UPLOAD_URL=$(
 		-f \
 		-H "Authorization: token $GITHUB_ACCESS_TOKEN" \
 		"https://api.github.com/repos/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/releases/tags/$CIRCLE_TAG" \
+	| tee /dev/stderr \
 	| jq '.upload_url'
 )
 UPLOAD_URL=$(
 	echo $UPLOAD_URL \
-	| sed -e 's/{?name, label}/?name=/g' \
+	| sed -e 's/{?name,label}/?name=/g' \
 	| sed -e 's/"//g'
 )
+printf "URL: %s\n", $UPLOAD_URL
 
 curl \
 	-f \
