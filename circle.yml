@@ -1,3 +1,7 @@
 test:
   override:
     - ./build.sh
+deployment:
+  dev:
+    commands:
+      - ./release.sh seyana.pn seyana.png
