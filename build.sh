@@ -1,4 +1,8 @@
 #!/bin/bash
+set -e
+
+echo "len(token)=" ${#GITHUB_ACCESS_TOKEN}
+
 curl -C- "http://fonts.gstatic.com/ea/notosansjapanese/v6/download.zip" -o noto.zip
 unzip noto.zip
 ls -lahFs
