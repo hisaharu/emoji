@@ -3,5 +3,6 @@ test:
     - ./build.sh
 deployment:
   dev:
+    branch: dev
     commands:
       - ./release.sh seyana.pn seyana.png
