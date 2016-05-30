@@ -2,6 +2,7 @@
 set -e
 
 echo "len(token)=" ${#GITHUB_ACCESS_TOKEN}
+env | grep -E '^CIRCLE_'
 
 sudo apt-get install -y jq
 
